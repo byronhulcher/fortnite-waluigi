@@ -40,17 +40,20 @@ https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
         <img id="sky" src="https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FUrchin_Underpass.jpg?1534248349885">
       </a-assets>
 
-      <a-entity position="0 10 13">
+      <a-entity position="-5 10 16">
       	<a-camera></a-camera>
       </a-entity>
 
       <a-entity mmd="audio:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FFortnite%20Dance%20on%20Blue%20Screen%20%5B5BearlSP5M8%5D.wav?1534247169661;
-                     audioDelayTime:0.5; afterglow:2.0;">
-        <a-entity mmd-model="model:https://fortnite-waluigi.glitch.me/mmd/Dasiy/daisy.pmx;
+                     audioDelayTime:0.5; afterglow:2.0;"
+                rotate="0 45 0">
+        <a-entity mmd-model="model:https://fortnite-waluigi.glitch.me/mmd/Daisy/daisy.pmx;
                              vmd:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FMotion.vmd?1534247171629;
                              physics:true;"
                   shadow="cast:true"
-                  position="7 0 -7"></a-entity>
+                  position="7 0 -7"
+                  rotate="0 15 0"
+                  ></a-entity>
         <a-entity mmd-model="model:https://fortnite-waluigi.glitch.me/mmd/Waluigi/Waluigi.pmd;
                              vmd:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FMotion.vmd?1534247171629;
                              physics:true;"
