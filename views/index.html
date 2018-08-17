@@ -1,0 +1,92 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fortnite</title>
+    <meta name="description" content="A-Frame MMD loader component">
+    <script>
+    /*
+    var WebVRConfig = {
+        FORCE_ENABLE_VR: true,
+        BUFFER_SCALE: 1.0
+    };
+    */
+    </script>
+    <script src="https://cdn.rawgit.com/aframevr/aframe/v0.5.0/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.rawgit.com/kripken/ammo.js/dcab07bf0e7f2b4b64c01dc45da846344c8f50be/builds/ammo.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/takahirox/aframe-outline/v1.1.0/build/aframe-outline.min.js"></script>
+    <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.2/build/a-mmd.min.js"></script>
+
+  </head>
+  <body>
+
+<!-- 
+The license of MMD assets used here
+https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
+-->
+
+    <a-scene antialias="true" outline>
+      <a-assets>
+        <img id="sky" src="https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FUrchin_Underpass.jpg?1534248349885">
+      </a-assets>
+
+      <a-entity position="0 10 13">
+      	<a-camera></a-camera>
+      </a-entity>
+
+      <a-entity mmd="audio:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FFortnite%20Dance%20on%20Blue%20Screen%20%5B5BearlSP5M8%5D.wav?1534247169661;
+                     audioDelayTime:0.5; afterglow:2.0;">
+        <a-entity mmd-model="model:https://rawgit.com/uveavanto/mmd/master/Callie%20and%20Marie%20by%20MLPVM%20and%20JayJayEdits/Marie/Marie%20A.pmx;
+                             vmd:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FMotion.vmd?1534247171629;
+                             physics:true;"
+                  shadow="cast:true"
+                  position="7 0 -7"></a-entity>
+        <a-entity mmd-model="model:https://rawgit.com/uveavanto/mmd/master/Callie%20and%20Marie%20by%20MLPVM%20and%20JayJayEdits/Callie/Callie.pmx;
+                             vmd:https://cdn.glitch.com/ce544b0f-8867-4dc4-a2e8-879bb99c49de%2FMotion.vmd?1534247171629;
+                             physics:true;"
+                  shadow="cast:true"
+                  position="-7 0 -7"></a-entity>
+      </a-entity>
+
+<a-cylinder color="#AAAAAA" height="0" radius="40" shadow="receive:true" ></a-cylinder>
+
+      <a-sky src="#sky"  rotation="0 -130 0"></a-sky>
+
+      <a-entity
+       shadow-light="type:directional;
+                              castShadow:true;
+                              color:#888;
+                              shadowMapWidth:1024;
+                              shadowMapHeight:1024;
+                              shadowCameraRight:20;
+                              shadowCameraTop:20;
+                              shadowCameraLeft:-20;
+                              intensity:0.8;
+                              shadowCameraBottom:-20"
+                position="-20 20 20"></a-entity>
+
+    
+    <a-entity position="25 51 35" shadow-light="angle:41.7;color:#b759b7;groundColor:#a796b1;decay:0.83;intensity:0.48;penumbra:1;type:spot; castShadow:true;
+                              shadowMapWidth:1024;
+                              shadowMapHeight:1024;
+                              shadowCameraRight:20;
+                              shadowCameraTop:20;
+                              shadowCameraLeft:-20;
+                              shadowCameraBottom:-20" > </a-entity>
+                                                      
+      
+      <a-entity position="-54 30 -23" rotation="0 300 0" light="angle:80;color:#FFA500;groundColor:#a796b1;;exponent:7.37;intensity:0.5;type:spot;penumbra:1"> </a-entity>
+                                                      
+    </a-scene>
+  </body>
+</html>
